@@ -1,9 +1,8 @@
-# sleepoutside
+# Cineflix
 
 ## Description
 
-Use this as a starting point to complete the WDD 330 team activity: the SleepOutside web application. It scaffolds out a simple web app with snowpack support to bundle up our assets.
-
+CineFlix is a web application that helps movie lovers be updated with the best rated movies,  create movie lists and track the movies they have watched. CineFlix offers a streamlined and interactive experience where users can explore movies, create watchlists, and read user-generated reviews. 
 ## Prerequisites
 
 - You must have Node installed. visit https://byui-cit.github.io/advcss/lesson01/l01-software.html and skip to the Node section for instructions
