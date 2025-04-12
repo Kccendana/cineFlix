@@ -1,7 +1,7 @@
 import { getLocalStorage, setLocalStorage } from "./utils.mjs";
 
 function movieDetailsTemplate(movie) {
-    const year = movie.first_air_date.substring(0, 4);
+    const year = (movie.first_air_date || movie.release_date || '').substring(0, 4);
     const genresHTML = movie.genres
         .map((genre) => `<li>${genre.name}</li>`)
         .join("");
@@ -39,7 +39,7 @@ function movieDetailsTemplate(movie) {
         <div class="contain">
             <div class="year-duration">
             <span class="year">${year}</span>
-            <span class="duration">${movie.episode_run_time[0]|| ""}</span>
+            <span class="duration">${(movie.episode_run_time?.[0] || movie.runtime) ? `${movie.episode_run_time?.[0] || movie.runtime}m` : ""}</span>
         </div>
         <div class="titleOverviewCon">
             <h2 class="title">${movie.title|| movie.name}</h2>
