@@ -4,36 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Katherine Cendana">
-    <meta name="description" content="Welcome to our website! Discover a wide range of delicious dishes, exciting offers, and more. Start your journey with us and explore what we have to offer!">
+    <meta name="description" content="Welcome to our website! Discover a wide range of movies, create your own playlist and enjoy with with your friends anfd families!">
     <title>Cineflix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">   
-    <script  defer src="scripts/index.js"></script>
+    <link rel="stylesheet" href="../css/style.css">   
+    <script  defer src="../js/mylist.js" type="module"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="/images/logos/cineflix_logo.svg" alt="" class="logo">
-            <a href="#"  class="nav-button" id="nav-button">
-                <span class="ham"></span>
-                <span class="ham"></span>
-                <span class="ham"></span>   
-            </a>
-            <ul class="navi">
-                <li class="navMenu"><a id="home" class="active" href="index.html">Home</a></li>
-                <li class="navMenu"><a id="old" href="movies/index.html">Movies</a></li>
-                <li class="navMenu"><a id="large" href="mylist/index.html">My List</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Under Construction</h1>
+    <header id="header"></header>
+    <main class="list-main">
+        <div class="alert">
+            <p class="message"></p>
+            <span class="close">X</span>
+        </div>
+        <h1>My List</h1>
+        <ul class="movies list"></ul>
     </main>
-    <footer>
-        <p>&copy; <span id="year"></span>🌸 Katherine Cendana 🌸 Philippines</p>
-        <p class="lastModif">Last modified: <span id="lastModif"></span></p>
-    </footer>
+    <footer id="footer"></footer>
 </body>
 </html>
