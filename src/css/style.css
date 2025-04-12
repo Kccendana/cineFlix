@@ -71,7 +71,7 @@ nav {
 }
 .navi {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
   z-index: 100;
   bottom: 0;
@@ -79,7 +79,7 @@ nav {
   left: 0;
   width: 100%;
   padding: 1em 5%;
-  background: rgba(0, 0, 0, 0.719);
+  background: rgb(0 0 0 / 83%);
 }
 img{
   width: 100%;
