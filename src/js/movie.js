@@ -7,7 +7,5 @@ const dataSource = new ExternalServices(category);
 const movieId = getParam("id");
 
 const movie = new MovieDetail(movieId, dataSource, category);
-
 movie.init();
 loadHeaderFooter();
-

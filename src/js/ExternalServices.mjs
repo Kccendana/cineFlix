@@ -43,4 +43,10 @@ export default class ExternalServices {
         }
 
     }
+    async searchMovie(query){
+        const response = await fetch(`${baseUrl}search/movie?query=${query}&language=en-US&page=1&api_key=${api_key}`);
+        const data = await convertToJson(response);
+        console.log(data.results)
+        return data.results;
+    }
 }

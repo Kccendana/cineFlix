@@ -1,23 +1,6 @@
-import { renderListWithTemplate,getLocalStorage,setLocalStorage, getItemsFromLocalStorage } from "./utils.mjs";
-function limitText(text, max = 500) {
-    return text.length > max ? text.slice(0, max) + "..." : text;
-  }
-function movieCardTemplate(movie) {
-    return `
-      <li class="movie-cards">
-            <div class="movie">
-               <img src="https://image.tmdb.org/t/p/original${movie.poster_path}" alt="${movie.title} poster">
-    
-                <span class="rating">${movie.vote_average.toFixed(0)}</span>
-            
-                <div class="overview">
-                    <p>${limitText(movie.overview)}</p>
-                    <a href="../movie_detail/index.html?category=${movie.category}&id=${movie.id}" class="know-more btn" id="${movie.id}">Know More</a>
-                    <a href="" class="add btn" id="${movie.id}">Add to List</a>
-                </div>
-            </div>
-      </li>`;
-  }
+import { limitText, renderListWithTemplate,getLocalStorage,setLocalStorage, movieCardTemplate } from "./utils.mjs";
+
+
 export default class MovieList {
     constructor(category, dataSource, listElement) {
         this.category = category;

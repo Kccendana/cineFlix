@@ -83,3 +83,24 @@ export async function loadHeaderFooter() {
   const footerElement = document.querySelector("#footer");
   renderWithTemplate(footerTemplate, footerElement);
 }
+
+export function movieCardTemplate(movie) {
+  return `
+    <li class="movie-cards">
+          <div class="movie">
+             <img src="https://image.tmdb.org/t/p/original${movie.poster_path}" alt="${movie.title} poster">
+  
+              <span class="rating">${movie.vote_average.toFixed(0)}</span>
+          
+              <div class="overview">
+                  <p>${limitText(movie.overview)}</p>
+                  <a href="../movie_detail/index.html?category=${movie.category}&id=${movie.id}" class="know-more btn" id="${movie.id}">Know More</a>
+                  <a href="" class="add btn" id="${movie.id}">Add to List</a>
+              </div>
+          </div>
+    </li>`;
+}
+
+export function limitText(text, max = 500) {
+  return text.length > max ? text.slice(0, max) + "..." : text;
+}

@@ -47,7 +47,6 @@ function movieDetailsTemplate(movie) {
         </div>
         </div>
         <div class="castGenCon">
-            <ul class="cast"></ul>
             <ul class="genres">${genresHTML}</ul>
         </div>
     </section>
