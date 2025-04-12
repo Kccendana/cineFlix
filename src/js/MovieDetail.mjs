@@ -66,7 +66,7 @@ export default class MovieDetail {
         // use our datasource to get the details for the current product. findProductById will return a promise! use await or .then() to process it
         this.movie = await this.dataSource.findDataById(this.category, this.movieId);
         console.log(this.movie);
-        this.movie["category"] = this.category
+        this.movie["category"] = this.category;
 
         //get the trailer key
         this.trailer_key = await this.dataSource.findTrailer(this.category, this.movieId);
