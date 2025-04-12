@@ -11,7 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, "src/index.html"),
         movies: resolve(__dirname, "src/movies/index.html"),
         mylist: resolve(__dirname, "src/mylist/index.html"),
-        // product: resolve(__dirname, "src/product_pages/index.html"),
+        moviedetails: resolve(__dirname, "src/movieDetails/index.html"),
         // product_listing: resolve(__dirname, "src/product_listing/index.html"),
       },
     },
