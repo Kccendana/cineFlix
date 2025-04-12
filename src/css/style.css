@@ -14,22 +14,49 @@
   list-style: none;
   font-family: "Montserrat", sans-serif;
   color: var(--headfontcolor);
+  text-decoration: none;
 }
-
-
-
+main{
+  position: relative;
+}
+.alert {
+  position: fixed;
+  z-index: 100;
+  display: none;
+  background-color: white;
+  color: black;
+  width: 20em;
+  text-align: center;
+  padding: 2em;
+  height: 5em;
+  font-size: 1.5em;
+  /* top: 1em; */
+  left: 50%;
+  /* transform: translateX(-50%); */
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+p.message {
+  color: var(--color1);
+}
+span.close {
+  color: black;
+  position: absolute;
+  right: 1em;
+  top: 0.75em;
+  cursor: pointer;
+}
 h1, h2, h3, h4 {
   font-family: "Merriweather", serif;
   color: var(--headfontcolor);
 }
-
 body {
   background-color: var(--color3);
   min-width: 425px;
 }
 header {
   height: 4em;
-
 }
 nav {
   display: flex;
@@ -42,90 +69,279 @@ nav {
 .logo {
   width: 40px;
 }
-
-
-.logo.hidden {
-  visibility: hidden;
-}
-
-.nav-button {
-  display: flex;
-  flex-direction: column;
-  width: 30px;
-  height: 30px;
-  justify-content: space-around;
-  position: absolute;
-  top: 1.25em;
-  right: 1.25em;
-  cursor: pointer;
-}
-
-.ham {
-  width: 100%;
-  height: 4px;
-  background-color: var(--headfontcolor);
-  border-radius: 2px;
-}
 .navi {
-  display: none;
-}
-.navi.show {
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 3.5em;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
   right: 0;
-  background-color: var(--color3);
+  left: 0;
   width: 100%;
-  text-align: center;
-}
-
-.nav-button.close .ham:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-button.close .ham:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-.nav-button.close .ham:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-.navi li a {
-  text-decoration: none;
-  color: var(--headfontcolor);
-  padding: 0.5em;
-  display: block;
-}
-.navi li a:hover{
-  border-top: 1px solid var(--headfontcolor);
-}
-
-.active {
-  border-bottom: 2px solid var(--headfontcolor);
+  padding: 1em 5%;
+  background: rgba(0, 0, 0, 0.719);
 }
 img{
   width: 100%;
 }
 
+.desc_con {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, .7) 10%, transparent); 
+}
+span.closeModal {
+  font-size: 2em;
+  position: absolute;
+  cursor: pointer;
+  top: 10%;
+  z-index: 100000000;
+  right: 7%;
+}
+
+p.feature-title {
+  font-size: 2em;
+  font-weight: 900;
+}
+.btnCon {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-start;
+  align-items: center;
+}
+.playBtn {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  gap: 0.5em;
+}
+
+.play {
+  color: white;
+}
+
+.imgBtn {
+  width: 20px;
+}
+
+section{
+  padding: 1em;
+}
+/*serch bar*/
+.search{
+  background-color: transparent;
+  border: 2px solid var(--headfontcolor);
+  padding:0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  color:#fff;
+  font-family: inherit;
+}
+
+.search:focus{
+  outline:0;
+  background-color: var(--color3);
+}
+
+.search::placeholder{
+  color: var(--headfontcolor);
+}
+
+/*movie cards*/
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 0.2px 4px 5px rgb(245 241 241 / 57%);
+  background-color: var(--color3);
+  position:relative;
+  overflow: hidden;
+}
+
+.movie img {
+  width: 100%;
+  object-fit: cover;
+}
+span.rating {
+  background: var(--color4);
+  padding: 4px 6px;
+  border-radius: 5px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font: 1em;
+}
+
+.overview p {
+  color: black;
+  height: fit-content;
+  margin-bottom: 1.5em;
+}
+
+.overview {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: white;
+  color: black;
+  padding: 1em;
+  max-height: 100%;
+  transform:translateY(101%);
+  transition:transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+  transform:translateY(0)
+} 
+.btn {
+  background-color: var(--color4);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 5px;
+  cursor: pointer;
+} 
+.movies, .tv {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  list-style-type: none;
+  align-items: center;
+  padding: 0px;
+}
+
+.movies-rec h2{
+  padding-top: 2em;
+  font-size: 2em;
+}
+
+/*myList*/
+main.list-main {
+  padding: 0 10%;
+}
+footer {
+  padding: 2em;
+  text-align: center;
+}
+span.closeModal {
+  font-size: 2em;
+  position: absolute;
+  cursor: pointer;
+  top: 0.5em;
+  z-index: 100000000;
+  right: 3em;
+}  
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/*movie details*/
+section.movieInfo {
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+.year-duration {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.year-duration span {
+  font-size: 0.9em;
+  font-weight: bolder;
+  color: gray;
+}
+.contain {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+.titleOverviewCon {
+  display: flex
+;
+  flex-direction: column;
+  gap: 0.75em;
+}
+ul.genres {
+  display: flex;
+  gap: 1em;
+}
 @media only screen and (min-width:769px){
+
+  section.movieInfo{
+    grid-template-columns: 0.75fr 0.25fr;
+  }
+  .navCon {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
   .nav-button {
       display: none;
   }
 
   .navi {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 1em;
-  }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+    position: static;
+    padding: 1em;
+    background: transparent;
+}
 
   header {
       padding: 0 10%;
   }
-
-  section.hero picture img {
-      height: 93vh;
+  .hero {
+    position: relative;
   }
+  .hero .heroImg {
+    height: 40em;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .desc_con {
+    position: absolute;
+    bottom: 0em;
+    width: 100%;
+    padding: 5% 60% 5% 10%;
+    left: 0em;
+    right: 0;
+}
+
+section {
+  padding: 0 10%;
+}
 }
