@@ -18,10 +18,9 @@ function listItemTemplate(item) {
                 <div class="overview">
                     <p>${item.overview}</p>
                     <div class="btnCon">
-                    <a href="../movie_detail/index.html?/${item.category}/id=${item.id}" class="know-more btn" id="${item.id}">Know More</a>
+                    <a href="../movie_detail/index.html?category=${item.category}&id=${item.id}" class="know-more btn" id="${item.id}">Know More</a>
                     <div class="remove btn" data-id="${item.id}" id="${item.id}">Remove</div>
                     </div>
-                    
                 </div>
             </div>
       </li>`;
