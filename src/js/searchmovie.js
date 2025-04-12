@@ -4,8 +4,11 @@ import MovieSearch from "./MovieSearch.mjs";
 loadHeaderFooter();
 
 const search = getParam("search");
+
 const dataSource = new ExternalServices(search);
 const element = document.querySelector(".movies");
-const searchMovie = new MovieSearch(search, dataSource, element)
+const searchMovie = new MovieSearch(search, dataSource, element);
+
+document.querySelector(".query").textContent = search;
 
 searchMovie.init();
