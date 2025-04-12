@@ -12,7 +12,7 @@ function movieCardTemplate(movie) {
             
                 <div class="overview">
                     <p>${limitText(movie.overview)}</p>
-                    <a href="../movieDetails/index.html?category=${movie.category}&id=${movie.id}" class="know-more btn" id="${movie.id}">Know More</a>
+                    <a href="../movie_detail/index.html?category=${movie.category}&id=${movie.id}" class="know-more btn" id="${movie.id}">Know More</a>
                     <a href="" class="add btn" id="${movie.id}">Add to List</a>
                 </div>
             </div>
@@ -59,7 +59,7 @@ export default class MovieList {
                 <p class="f-desc">${limitText(hero.overview)}</p>
                 <div class="btnCon">
                     <div id="${hero.id}" class="playBtn btn"><img src="/images/playBtn.svg" alt="playBtn" class="imgBtn"><span class="play">Play</span></div>
-                    <a href="../movieDetails/index.html?category=${hero.category}&id=${hero.id}" class="moreInfo btn">More Info</a>
+                    <a href="../movie_detail/index.html?category=${hero.category}&id=${hero.id}" class="moreInfo btn">More Info</a>
                 </div>
             </div>
         `
