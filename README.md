@@ -2,7 +2,7 @@
 
 ## Description
 
-CineFlix is a web application that helps movie lovers be updated with the best rated movies,  create movie lists and track the movies they have watched. CineFlix offers a streamlined and interactive experience where users can explore movies, create watchlists, and read user-generated reviews. 
+CineFlix is a web application that helps movie lovers be updated with the best rated movies,  add movie to list and watch trailer. CineFlix offers a streamlined and interactive experience where users can search and explore movies and add movielists. 
 ## Prerequisites
 
 - You must have Node installed. visit https://byui-cit.github.io/advcss/lesson01/l01-software.html and skip to the Node section for instructions
