@@ -17,3 +17,6 @@ CineFlix is a web application that helps movie lovers be updated with the best r
 - `npm run build` to build final files when you are ready to turn in. Note that only one person in your group should run build.
 - `npm run lint` to run ESLint against your code to find errors.
 - `npm run format` to run Prettier to automatically format your code.
+
+## Live Demo
+[Deploy link](https://cineviewflix.netlify.app/)
